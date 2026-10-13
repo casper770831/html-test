@@ -25,27 +25,13 @@
     <h2>環境</h2>
     <select id="env" onchange="updateLinks()">
       <option value="https://demo.mutron.com.tw">SIT（demo.mutron.com.tw）</option>
-      <option value="https://teamwalk2uat.taiwanlife.com">UAT（teamwalk2uat.taiwanlife.com）</option>
-      <option value="https://teamwalk2.taiwanlife.com">PROD（teamwalk2.taiwanlife.com）</option>
     </select>
   </div>
 
   <div class="card">
-    <h2>✅ 正式作法：使用者點擊</h2>
+    <h2>使用者點擊</h2>
     <a id="mainLink" class="btn primary" href="https://demo.mutron.com.tw/app/register-complete">返回 TeamWalk 登入</a>
     <p class="note">預期：直接開啟 App 並回到登入頁</p>
-  </div>
-
-  <div class="card">
-    <h2>❌ 對照組：自動導轉（預期不會開 App）</h2>
-    <button class="btn secondary" onclick="setTimeout(function () { location.href = target(); }, 1500)">1.5 秒後 JS 自動跳轉</button>
-    <p class="note">預期：停在 Safari 開啟網頁（或顯示 404 備援頁）</p>
-  </div>
-
-  <div class="card">
-    <h2>❌ 對照組：路徑不符（預期不會開 App）</h2>
-    <a id="wrongPathLink" class="btn secondary" href="https://demo.mutron.com.tw/app/other">/app/other</a>
-    <p class="note">預期：AASA 未開放此路徑，停在 Safari</p>
   </div>
 
   <script>
